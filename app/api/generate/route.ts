@@ -27,8 +27,8 @@ export async function POST(req: Request) {
 3. 틱톡 (TikTok) 광고 카피 구조:
 - 숏폼 영상에 어울리는 강렬하고 트렌디한 한 줄짜리 카피 1개만 작성 (공백 포함 100자 미만 필수)`;
 
-    // ⚠️ 핵심 교정: Unknown name 에러를 피하기 위해 지시문과 데이터를 하나의 대화 흐름(contents)으로 묶어 전달합니다.
-    const response = await fetch(`https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${apiKey}`, {
+    // ⚠️ 최종 교정: 정식 v1 주소에 맞춰 신규 유저 무제한 표준 모델인 'gemini-2.0-flash'로 꽂아줍니다.
+    const response = await fetch(`https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent?key=${apiKey}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
