@@ -27,9 +27,9 @@ export async function POST(req: Request) {
 3. 틱톡 (TikTok) 광고 카피 구조:
 - 숏폼 영상에 어울리는 강렬하고 트렌디한 한 줄짜리 카피 1개만 작성 (공백 포함 100자 미만 필수)`;
 
-    // ⚠️ 수정 포인트: 구글 정식 API 버전에서 가장 안정적이고 속도가 빠른 'gemini-2.0-flash'로 정착합니다.
+    // ⚠️ 최종 패치: 현재 전 세계 표준 메인 모델인 'gemini-2.5-flash'를 사용합니다.
     const response = await ai.models.generateContent({
-      model: 'gemini-2.0-flash',
+      model: 'gemini-2.5-flash',
       contents: `제품 정보:\n${productInfo}\n\n위 정보를 바탕으로 메타, 구글, 틱톡 양식에 맞게 각각 구분해서 카피를 짜줘.`,
       config: {
         systemInstruction: systemPrompt,
