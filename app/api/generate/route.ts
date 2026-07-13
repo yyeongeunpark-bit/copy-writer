@@ -19,8 +19,8 @@ import { NextResponse } from 'next/server';
 // 우리 서비스가 통째로 멈춰버리니까, 여러 개를 순서대로 준비해두고
 // 하나가 실패하면 자동으로 다음 걸 써보는 "보험" 역할을 하는 목록입니다.
 const MODEL_FALLBACK_CHAIN = [
-  'gemini-3.5-flash',        // 1순위: 가장 최신, 성능 좋은 모델
-  'gemini-2.5-flash-lite',   // 2순위: 3.5가 실패하면 이걸로 (상대적으로 안정적)
+  'gemini-3.5-flash',       // 1순위: 가장 최신, 성능 좋은 모델
+  'gemini-3.1-flash-lite',  // 2순위: 3.5가 과부하일 때 대신 시도할 모델 (같은 3.x 세대라 접근 가능)
 ];
 
 
