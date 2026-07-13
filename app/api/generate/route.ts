@@ -1,40 +1,63 @@
 import { NextResponse } from 'next/server';
 
-async function callGeminiWithRetry(apiKey: string, requestBody: any, maxRetries = 3) {
+// ─────────────────────────────────────────────
+// Gemini 모델 폴백 체인: 3.5 → 2.5 → 2.5-lite 순으로 시도
+// ─────────────────────────────────────────────
+const MODEL_FALLBACK_CHAIN = [
+  'gemini-3.5-flash',
+  'gemini-2.5-flash',
+  'gemini-2.5-flash-lite',
+];
+
+async function callSingleModel(apiKey: string, model: string, requestBody: any) {
+  const response = await fetch(
+    `https://generativelanguage.googleapis.com/v1/models/${model}:generateContent?key=${apiKey}`,
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(requestBody),
+    }
+  );
+  return response.json();
+}
+
+function isOverloaded(data: any) {
+  return (
+    data.error?.code === 503 ||
+    (data.error?.message || '').includes('high demand') ||
+    (data.error?.message || '').includes('overloaded')
+  );
+}
+
+async function callGeminiWithRetry(
+  apiKey: string,
+  requestBody: any,
+  maxRetriesPerModel = 2
+) {
   let lastError: any = null;
 
-  for (let attempt = 0; attempt < maxRetries; attempt++) {
-    const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1/models/gemini-3.5-flash:generateContent?key=${apiKey}`,
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(requestBody),
+  // 모델 순서대로 시도 (3.5 -> 2.5 -> 2.5-lite)
+  for (const model of MODEL_FALLBACK_CHAIN) {
+    for (let attempt = 0; attempt < maxRetriesPerModel; attempt++) {
+      const data = await callSingleModel(apiKey, model, requestBody);
+
+      if (!isOverloaded(data)) {
+        // 성공했거나, 과부하가 아닌 다른 에러 -> 바로 반환
+        return data;
       }
-    );
 
-    const data = await response.json();
-
-    // 과부하(503) 에러가 아니면 바로 반환 (성공이든 다른 종류의 에러든)
-    const isOverloaded =
-      data.error?.code === 503 ||
-      (data.error?.message || '').includes('high demand') ||
-      (data.error?.message || '').includes('overloaded');
-
-    if (!isOverloaded) {
-      return data;
+      lastError = data.error;
+      const waitTime = 1000 * Math.pow(2, attempt);
+      await new Promise((resolve) => setTimeout(resolve, waitTime));
     }
-
-    lastError = data.error;
-    // 1초 → 2초 → 4초 순으로 대기 후 재시도
-    const waitTime = 1000 * Math.pow(2, attempt);
-    await new Promise((resolve) => setTimeout(resolve, waitTime));
+    // 이 모델은 포기하고 다음 모델로 넘어감
   }
 
-  throw new Error(lastError?.message || '반복 재시도 후에도 모델이 응답하지 않습니다.');
+  throw new Error(lastError?.message || '모든 모델이 과부하 상태입니다. 잠시 후 다시 시도해주세요.');
 }
+// ─────────────────────────────────────────────
 
 export async function POST(req: Request) {
   try {
@@ -64,7 +87,7 @@ export async function POST(req: Request) {
 * 할인, 적립, 사은품, 기간한정, 단독혜택 같은 정보는 잘 보이게 쓴다.
 * 셀럽/프로그램명이 있으면 자연스럽게 연결한다.
 * 문장은 광고처럼 보여야 하지만 너무 부담스럽지 않게 작성한다.
-* “지금이 타이밍”, “놓치면 아쉬운”, “특별한 혜택”, “단독”, “최대 혜택”, “시즌 추천”, “데일리 루틴”, “장마 대비”, “여름 준비” 같은 온스타일식 상업 문법을 잘 활용한다.
+* "지금이 타이밍", "놓치면 아쉬운", "특별한 혜택", "단독", "최대 혜택", "시즌 추천", "데일리 루틴", "장마 대비", "여름 준비" 같은 온스타일식 상업 문법을 잘 활용한다.
 * 건강기능식품/뷰티/생활가전/패션/리빙 등 상품군에 따라 어조를 조금씩 다르게 맞춘다.
 
 [1. 메타 시스템 문구 작성 규칙]
@@ -122,11 +145,11 @@ export async function POST(req: Request) {
 
 예시 느낌:
 
-* “아 이거 살걸…”
-* “비 오는 날도 멋쁨”
-* “누가 입어도 예쁜 원피스”
-* “지금이 가장 좋은 타이밍”
-* “비싸서 못 갔던 5성급 호텔뷔페”
+* "아 이거 살걸…"
+* "비 오는 날도 멋쁨"
+* "누가 입어도 예쁜 원피스"
+* "지금이 가장 좋은 타이밍"
+* "비싸서 못 갔던 5성급 호텔뷔페"
 
 [문구 작성 시 중요 반영 포인트]
 
