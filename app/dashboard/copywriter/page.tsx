@@ -25,25 +25,24 @@ const initialHistory: HistoryItem[] = [
     id: 1,
     time: "16:10",
     title: "기획전 안 1",
-    request: "브랜드명: 닥터포헤어 / 상품명: 폴리젠 샴푸 / 핵심 포인트: 탈모완화 증명, 두피 각질 개선 / 혜택: 단독 35% 할인 + 사은품 증정 / 타겟: 3040 직장인",
+    request: "KBO 올스타전 기념\n6/29~상시 99딜(오전 10시) -> 매일 10시 CJ단독 한정수량 9,900원딜\n전 브랜드 통합 최대할인율 50% \n-> 올스타전도 나만의 스타일로 응원즁\n올스타전 기념! 기간한정 9,900원딜 오픈",
     results: {
-      meta1: "매일 빠지는 모발로 스트레스받는다면 지금이 타이밍 ✨\n탈모 증상 완화 기능성 검증 완료! 닥터포헤어 폴리젠 샴푸로 두피부터 탄탄하게 케어하세요🖤\n\n✔ 인체 적용 시험으로 증명된 탈모 증상 완화 효과\n✔ 답답한 두피 각질과 유분기까지 시원하게 딥클렌징\n✔ 오직 온스타일에서만 만나는 단독 35% 한정 특가\n\n💎 CJ온스타일에서 닥터포헤어를 만나보세요\n#닥터포헤어 #탈모샴푸 #두피케어 #CJ온스타일 #한정특가",
-      meta2: "거울 볼 때마다 휑해진 가르마가 신경 쓰였다면 ✨\n퇴근 후 지친 두피에 주는 완벽한 리프레시, 닥터포헤어 폴리젠 샴푸로 시작하는 건강한 두피 루틴🖤\n\n✔ 3040 직장인들의 무너진 두피 밸런스를 위한 맞춤 솔루션\n✔ 풍성한 거품으로 모근 끝까지 영양을 꽉 채우는 탄력 안심 케어\n\n💎 CJ온스타일에서 닥터포헤어를 만나보세요\n#두피밸런스 #직장인인생템 #샴푸추천 #홈케어루틴",
-      demandgen: "광고 제목 5개\n1. 단독 35% 할인 닥터포헤어\n2. 탈모완화 증명 폴리젠 샴푸\n3. CJ온스타일 단독 특가 행사\n4. 직장인 두피 각질 케어 솔루션\n5. 단 3일간 진행되는 한정 혜택\n\n긴 광고 제목 5개\n1. 탈모 완화 기능성 검증 완료 닥터포헤어 폴리젠 샴푸 단독 35% 특가\n2. 3040 직장인 두피 고민 해결사 닥터포헤어 샴푸 사은품 증정 혜택\n3. 두피 각질부터 모근 탄력까지 한 번에 케어하는 폴리젠 샴푸 솔루션\n4. CJ온스타일 단독 구성으로 만나는 닥터포헤어 한정 수량 패키지\n5. 매일 쓰는 샴푸로 시작하는 탈모 예방 건강한 두피 케어 루틴\n\n설명 5개\n1. 인체 적용 시험으로 증명된 탈모 증상 완화 효과를 지금 경험해보세요.\n2. 답답한 두피 각질과 유분기까지 시원하게 딥클렌징하여 모근을 탄탄하게 만듭니다.\n3. 오직 온스타일에서만 만나는 단독 35% 할인 혜택과 특별 사은품을 놓치지 마세요.\n4. 풍성한 영양 거품으로 무너진 두피 밸런스를 바로잡는 직장인 필수 템입니다.\n5. 모발 탄력 개선과 완벽한 두피 리프레시를 선사하는 닥터포헤어 패키지입니다.",
-      pmax: "구글 PMAX 규격에 맞게 변환된 카피 필드 영역입니다.",
-      aci: "구글 ACI 규격에 맞게 변환된 카피 필드 영역입니다.",
-      tiktok: "맨날 빠지는 머리카락 보고 흠칫했다면? 늦기 전에 두피 모근부터 꽉 잡아야 해요! 인체 시험으로 탈모 완화 증명된 닥터포헤어 폴리젠 샴푸, 지금 CJ온스타일 단독 35% 할인에 특별 사은품 구성까지 다 가져가세요!"
+      meta1: "올스타전도 나만의 스타일로 응원 중! ⚾✨\nKBO 올스타전 기념, 오직 CJ온스타일에서만 만나는 역대급 기간 한정 9,900원딜이 오픈했습니다🖤\n\n✔ 매일 오전 10시, CJ단독 한정수량 9,900원 선착순 오픈\n✔ 전 브랜드 통합 최대 50% 압도적인 할인율\n✔ 올스타전을 더 완벽하게 즐기는 나만의 응원 스타일링\n\n💎 CJ온스타일에서 지금 한정 수량 특가를 만나보세요\n#KBO올스타전 #올스타전 #99딜 #한정수량 #CJ온스타일 #단독특가",
+      meta2: "야구팬 주목! 매일 오전 10시가 기다려지는 이유 ⚾✨\nKBO 올스타전 기념 역대급 혜택, 전 브랜드 통합 최대 50% 할인에 한정수량 9,900원 딜까지 완벽 구성🖤\n\n✔ 올스타전 기념 기간한정 9,900원 특별 찬스\n✔ 매일 아침 10시 정각, 선착순 한정 수량 오픈 되니 스피드가 생명",
+      demandgen: "광고 제목 5개\n1. KBO 올스타전 9,900원딜\n2. 매일 10시 CJ단독 한정 특가\n3. 전 브랜드 통합 최대 50% 할인\n4. 올스타전 기념 기간한정 99딜\n5. 나만의 스타일로 올스타전 응원\n\n긴 광고 제목 5개\n1. KBO 올스타전 기념 매일 오전 10시 CJ단독 한정수량 9,900원딜 오픈\n2. 전 브랜드 통합 최대 할인율 50% 올스타전 기념 기간한정 특가 찬스\n3. 올스타전도 나만의 스타일로 응원 중 온스타일 단독 9,900원 선착순 딜\n4. 매일 아침 10시 오픈되는 KBO 올스타전 기념 한정수량 99딜 기획전\n5. 기간 한정 역대급 혜택 전 브랜드 통합 최대 50% 세일 바로가기\n\n설명 5개\n1. 매일 오전 10시, CJ온스타일에서만 만나는 한정수량 9,900원 단독 특가가 진행됩니다.\n2. 전 브랜드 통합 최대 50% 할인율로 올스타전을 나만의 스타일로 완벽하게 준비하세요.\n3. 올스타전 기념 기간한정 9,900원 딜이 오픈되었으니 매일 아침 선착순 기회를 놓치지 마세요.\n4. KBO 올스타전의 열기를 더해줄 역대급 단독 구성과 특별 혜택을 지금 확인해보세요.\n5. 나만의 스타일로 응원하는 야구팬들을 위한 온스타일만의 특별 한정 수량 패키지입니다.",
+      pmax: "구글 PMAX 규격 필드입니다.",
+      aci: "구글 ACI 규격 필드입니다.",
+      tiktok: "올스타전 응원도 나만의 스타일로! 매일 오전 10시 CJ온스타일 단독 한정수량 9,900원딜 오픈! 전 브랜드 통합 최대 50% 할인까지 다 주니까 야구팬이라면 지금 프로필 링크 누르고 선착순 99딜 탑승하세요!"
     }
   }
 ];
 
 export default function CopywriterPage() {
-  const [requestText, setRequestText] = useState(
-    "브랜드명: \n상품명: \n핵심 포인트: \n혜택: \n기간: \n방송명/기획전명: \n셀럽/모델: \n타겟: \n꼭 넣을 표현: \n제외할 표현: \n해시태그 참고: "
-  );
+  // 사용자가 편하게 줄바꿈하며 통으로 넣을 수 있는 자유 서식 입력창
+  const [requestText, setRequestText] = useState('');
   const [resultText, setResultText] = useState<PlatformResult | null>(null);
 
-  // 1. 브라우저가 열릴 때 localStorage에서 영구 기억 히스토리 로드
+  // localStorage 연동 (컴퓨터 꺼도 기억 완료)
   const [historyList, setHistoryList] = useState<HistoryItem[]>(() => {
     if (typeof window !== 'undefined') {
       const savedHistory = localStorage.getItem('copywriter_history');
@@ -61,37 +60,30 @@ export default function CopywriterPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [activeGoogleTab, setActiveGoogleTab] = useState<'demandgen' | 'pmax' | 'aci'>('demandgen');
 
-  // 텍스트 영역에서 특정 항목의 값을 파싱하는 헬퍼 함수
-  const parseInputField = (text: string, fieldName: string): string => {
-    const regex = new RegExp(`${fieldName}\\s*:\\s*(.*)`, 'i');
-    const match = text.match(regex);
-    return match && match[1] ? match[1].trim() : '';
-  };
-
   const handleGenerate = async () => {
-    if (!requestText.trim()) return alert('브랜드 및 상품 정보를 입력해주세요!');
+    if (!requestText.trim()) return alert('광고 기획 내용을 입력해주세요!');
     setIsLoading(true);
 
     try {
-      // 2. 입력창 텍스트에서 각 항목을 추출하여 백엔드가 원하는 규격(JSON body)으로 조립
+      // 💡 핵심 변경점: 쪼개지 않고 통째로 보낸 뒤, 백엔드 프롬프트가 문맥을 분석하도록 전달
       const payload = {
-        brandName: parseInputField(requestText, '브랜드명'),
-        productName: parseInputField(requestText, '상품명'),
-        keyPoints: parseInputField(requestText, '핵심 포인트'),
-        benefits: parseInputField(requestText, '혜택'),
-        duration: parseInputField(requestText, '기간'),
-        broadcastName: parseInputField(requestText, '방송명/기획전명'),
-        celebName: parseInputField(requestText, '셀럽/모델'),
-        target: parseInputField(requestText, '타겟'),
-        mustInclude: parseInputField(requestText, '꼭 넣을 표현'),
-        mustExclude: parseInputField(requestText, '제외할 표현'),
-        hashtagRef: parseInputField(requestText, '해시태그 참고'),
+        brandName: requestText, 
+        productName: '',
+        keyPoints: '',
+        benefits: '',
+        duration: '',
+        broadcastName: '',
+        celebName: '',
+        target: '',
+        mustInclude: '',
+        mustExclude: '이전 대화나 테스트에 등장했던 서현, 니트, 의류 관련 정보는 완전히 무시하고 오직 이번 입력값으로만 작성할 것',
+        hashtagRef: ''
       };
 
       const response = await fetch('/api/gemini', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload), // 폼 규격에 맞춘 결합 데이터 전송
+        body: JSON.stringify(payload),
       });
 
       if (!response.ok) {
@@ -102,13 +94,11 @@ export default function CopywriterPage() {
       const data = await response.json();
       const rawText = data.result;
 
-      // 3. 백엔드 특수 구분 기호 기준 정밀 분배 파싱
       const meta1 = rawText.split('===META1===')[1]?.split('===META2===')[0]?.trim() || '추출 실패';
       const meta2 = rawText.split('===META2===')[1]?.split('===GOOGLE_DEMANDGEN===')[0]?.trim() || '추출 실패';
       const demandgen = rawText.split('===GOOGLE_DEMANDGEN===')[1]?.split('===TIKTOK===')[0]?.trim() || '추출 실패';
       const tiktok = rawText.split('===TIKTOK===')[1]?.trim() || '추출 실패';
 
-      // 기존 구글 PMAX, ACI 보드 호환 유지를 위한 대체 매핑
       const generatedResults: PlatformResult = { 
         meta1, 
         meta2, 
@@ -123,10 +113,9 @@ export default function CopywriterPage() {
       const now = new Date();
       const timeString = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
       
-      // 브랜드명과 상품명을 조합해 히스토리 타이틀 생성
-      const displayTitle = (payload.brandName || payload.productName) 
-        ? `${payload.brandName} ${payload.productName}`.trim()
-        : `캠페인 안 ${historyList.length + 1}`;
+      // 첫 줄의 일부를 잘라서 히스토리 제목으로 자동 설정
+      const firstLine = requestText.split('\n')[0] || '';
+      const displayTitle = firstLine.length > 15 ? firstLine.slice(0, 15) + '...' : firstLine || `캠페인 안 ${historyList.length + 1}`;
 
       const newHistory: HistoryItem = {
         id: Date.now(),
@@ -136,19 +125,17 @@ export default function CopywriterPage() {
         results: generatedResults
       };
 
-      // 4. 리액트 상태 동기화 및 브라우저 localStorage 영구 보존 동시 실행
       const updated = [newHistory, ...historyList];
       setHistoryList(updated);
       localStorage.setItem('copywriter_history', JSON.stringify(updated));
 
     } catch (error: any) {
-      alert(`엔진 파싱 오류: ${error.message}\n데이터 추출 포맷을 다시 확인해 주세요.`);
+      alert(`엔진 파싱 오류: ${error.message}`);
     } finally {
       setIsLoading(false);
     }
   };
 
-  // 히스토리 전체 삭제 헬퍼 함수
   const handleClearHistory = () => {
     if (confirm("그동안 저장된 모든 카피 히스토리를 영구히 삭제하시겠습니까?")) {
       setHistoryList([]);
@@ -158,24 +145,19 @@ export default function CopywriterPage() {
 
   return (
     <div className="flex h-screen w-screen m-0 p-0 bg-gray-100 text-gray-950 overflow-hidden font-sans relative">
-      
-      {/* 메인 작업 영역 (좌측 8/12) */}
       <div className="w-8/12 h-full flex flex-col border-r border-gray-300 bg-white">
         <div className="p-5 border-b border-gray-200 flex justify-between items-center bg-gray-50/50 flex-shrink-0">
-          <h1 className="text-xl font-extrabold text-gray-900">
-            ✍️ 온스타일 멀티 매체 카피라이터 엔진
-          </h1>
-          <Link href="/dashboard" className="text-xs font-bold text-gray-500 border border-gray-300 rounded-lg px-3 py-1.5 bg-white">
-            &larr; 대시보드 메인
-          </Link>
+          <h1 className="text-xl font-extrabold text-gray-900">✍️ 온스타일 멀티 매체 카피라이터 엔진</h1>
+          <Link href="/dashboard" className="text-xs font-bold text-gray-500 border border-gray-300 rounded-lg px-3 py-1.5 bg-white">&larr; 대시보드 메인</Link>
         </div>
 
-        {/* 텍스트 입력창 */}
+        {/* 텍스트 자유 입력창 (예전처럼 통째로 메모장처럼 쓰는 영역) */}
         <div className="h-2/5 p-6 flex flex-col border-b border-gray-200 bg-white flex-shrink-0">
           <textarea 
             value={requestText}
             onChange={(e) => setRequestText(e.target.value)}
             disabled={isLoading}
+            placeholder="광고 기획 내용을 자유롭게 복사+붙여넣기 하세요."
             className="w-full flex-1 p-4 bg-gray-50 border border-gray-300 rounded-xl resize-none text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
           <button 
@@ -187,10 +169,9 @@ export default function CopywriterPage() {
           </button>
         </div>
 
-        {/* 3단 레이아웃 완전체 보드 출력부 */}
+        {/* 결과 보드 */}
         <div className="flex-1 p-6 flex flex-col bg-gray-50/30 min-h-0 overflow-hidden">
           <h2 className="text-sm font-black text-gray-500 mb-3 flex-shrink-0">✨ 실무 배치용 매체별 최종 피드셋</h2>
-          
           <div className="grid grid-cols-3 gap-4 flex-1 min-h-0">
             {/* Meta */}
             <div className="border border-blue-200 rounded-xl p-4 flex flex-col bg-white shadow-sm min-h-0">
@@ -245,9 +226,7 @@ export default function CopywriterPage() {
             <span className="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-full font-black">{historyList.length} 건</span>
           </div>
           {historyList.length > 0 && (
-            <button onClick={handleClearHistory} className="text-[10px] text-red-500 hover:text-red-700 border border-red-200 rounded px-2 py-1 bg-white font-bold transition">
-              전체 비우기
-            </button>
+            <button onClick={handleClearHistory} className="text-[10px] text-red-500 hover:text-red-700 border border-red-200 rounded px-2 py-1 bg-white font-bold transition">전체 비우기</button>
           )}
         </div>
         <div className="flex-1 overflow-y-auto p-5 space-y-4 min-h-0">
@@ -262,7 +241,6 @@ export default function CopywriterPage() {
           ))}
         </div>
       </div>
-
     </div>
   );
 }
