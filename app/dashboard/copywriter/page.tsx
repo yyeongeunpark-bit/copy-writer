@@ -9,9 +9,7 @@ import {
   RefreshCw, 
   Send, 
   Layers, 
-  ExternalLink,
-  ChevronRight,
-  AlertCircle
+  ChevronRight
 } from 'lucide-react';
 
 interface CopyResults {
@@ -171,7 +169,7 @@ export default function CopywriterPage() {
             <textarea
               value={productInfo}
               onChange={(e) => setProductInfo(e.target.value)}
-              placeholder="예시)&#10;[행사] 온스타일 뷰티바이블&#10;[브랜드] 닥터지&#10;[상품명] 레드 블레미쉬 클리어 수딩 크림 1+1 기획&#10;[혜택] 단독 35% 할인 + 최대 10% 적립금 / 구매 시 선착순 증정"
+              placeholder="행사명, 브랜드, 상품명, 주요 혜택 등을 자유롭게 입력하세요."
               rows={6}
               className="w-full bg-[#0B0F17]/70 border border-gray-800 rounded-xl p-4 text-sm text-gray-200 placeholder-gray-600 focus:outline-none focus:ring-1 focus:ring-pink-500/50 resize-none transition"
             />
@@ -208,7 +206,6 @@ export default function CopywriterPage() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Meta 1안 */}
                 <Card 
                   title="💖 Meta (1안)" 
                   content={results.meta1} 
@@ -218,7 +215,6 @@ export default function CopywriterPage() {
                   onCopy={handleCopy}
                 />
 
-                {/* Meta 2안 */}
                 <Card 
                   title="💖 Meta (2안)" 
                   content={results.meta2} 
@@ -228,7 +224,6 @@ export default function CopywriterPage() {
                   onCopy={handleCopy}
                 />
 
-                {/* Google DemandGen */}
                 <Card 
                   title="🔍 Google (Demand Gen)" 
                   content={results.demandgen} 
@@ -238,7 +233,6 @@ export default function CopywriterPage() {
                   onCopy={handleCopy}
                 />
 
-                {/* TikTok */}
                 <Card 
                   title="🎵 TikTok" 
                   content={results.tiktok} 
